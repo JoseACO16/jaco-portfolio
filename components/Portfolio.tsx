@@ -187,26 +187,17 @@ const Portfolio = () => {
           </motion.div>
 
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="md:w-1/3"
-            >
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 mx-auto" />
-            </motion.div>
-
+            {/* Aquí quitamos el cuadro blanco, ahora solo texto */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="md:w-2/3"
+              className="md:w-full"
             >
               <h3 className="text-2xl font-bold mb-4">Mi Trayectoria</h3>
               <p className="text-gray-300 mb-6">
-                Soy un ingeniero de sistemas con experiencia en el desarrollo de aplicaciones web y móviles.
+                Soy un ingeniero de sistemas con un año de experiencia en el desarrollo de aplicaciones web y móviles.
                 Mi enfoque se centra en crear soluciones tecnológicas eficientes y escalables que resuelvan problemas reales.
               </p>
               <p className="text-gray-300 mb-8">
@@ -231,6 +222,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
 
       {/* Projects */}
       <section ref={projectsRef} className="py-20">
