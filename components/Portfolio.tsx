@@ -60,7 +60,7 @@ const Portfolio = () => {
         "Complete web application for a soccer academy in Costa Rica. Allows management of the academy, players, statistics, and categories.",
       image: "/Monka.PNG",
       github: "#",
-      demo: "https://monka-academia-61f7da87281a.herokuapp.com/login.html",
+      demo: "#",
       technologies: "Tecnologías: PHP, HTML, CSS, JS",
     }/*,
     {
