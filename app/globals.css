@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  overflow-x: hidden;     /* evita el desbordamiento horizontal */
+  background-color: #0b1220; /* del mismo tono que tu fondo oscuro */
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
