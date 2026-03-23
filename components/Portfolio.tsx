@@ -3,7 +3,15 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
-  Github, Linkedin, Mail, Download, User, Code, Briefcase, Phone, Instagram,
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  User,
+  Code,
+  Briefcase,
+  Phone,
+  Instagram,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -21,10 +29,18 @@ const Portfolio = () => {
   const scrollToSection = (section: string) => {
     setActiveSection(section);
     switch (section) {
-      case "home": homeRef.current?.scrollIntoView({ behavior: "smooth" }); break;
-      case "about": aboutRef.current?.scrollIntoView({ behavior: "smooth" }); break;
-      case "projects": projectsRef.current?.scrollIntoView({ behavior: "smooth" }); break;
-      case "contact": contactRef.current?.scrollIntoView({ behavior: "smooth" }); break;
+      case "home":
+        homeRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "about":
+        aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "projects":
+        projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "contact":
+        contactRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
     }
   };
 
@@ -62,7 +78,17 @@ const Portfolio = () => {
       github: "#",
       demo: "#",
       technologies: "Tecnologías: PHP, HTML, CSS, JS",
-    }/*,
+    },
+    {
+      title: "Portafolio Web Personal",
+      subtitle: "Personal Website",
+      description:
+        "Este mismo portafolio fue desarrollado con React y TypeScript para mostrar mis proyectos, habilidades y experiencia como desarrollador.",
+      image: "/placeholder.svg",
+      github: "#",
+      demo: "https://josecastillo.dev",
+      technologies: "Tecnologías: React, TypeScript, CSS, Vercel",
+    } /*,
     {
       title: "E-commerce Platform",
       description: "Full-featured online shopping experience con integración de pagos",
@@ -76,24 +102,38 @@ const Portfolio = () => {
       image: "/placeholder.svg",
       github: "#",
       demo: "#",
-    },*/
+    },*/,
   ];
 
-  const [toast, setToast] = useState<{ show: boolean; type: "loading" | "success" | "error"; text: string }>({
-    show: false, type: "loading", text: ""
+  const [toast, setToast] = useState<{
+    show: boolean;
+    type: "loading" | "success" | "error";
+    text: string;
+  }>({
+    show: false,
+    type: "loading",
+    text: "",
   });
-
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-950 text-gray-100">
       {/* Navigation */}
-      <motion.nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
-        initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}>
+      <motion.nav
+        className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <motion.div className="text-xl font-bold" whileHover={{ scale: 1.05 }}>JACO</motion.div>
+          <motion.div
+            className="text-xl font-bold"
+            whileHover={{ scale: 1.05 }}
+          >
+            JACO
+          </motion.div>
 
           <div className="hidden md:flex space-x-8">
-            {["home", "about", "projects", "contact"].map(item => (
+            {["home", "about", "projects", "contact"].map((item) => (
               <motion.button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -125,14 +165,23 @@ const Portfolio = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">José Andrés Castillo Orozco</h1>
-            <h2 className="text-2xl md:text-3xl text-blue-400 mb-6">Ingeniería de Sistemas</h2>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              José Andrés Castillo Orozco
+            </h1>
+            <h2 className="text-2xl md:text-3xl text-blue-400 mb-6">
+              Ingeniería de Sistemas
+            </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-lg">
-              Desarrollador Full Stack apasionado por crear experiencias digitales intuitivas y eficientes.
-              Especializado en tecnologías modernas como React, Node.js y TypeScript.
+              Desarrollador Full Stack apasionado por crear experiencias
+              digitales intuitivas y eficientes. Especializado en tecnologías
+              modernas como React, Node.js y TypeScript.
             </p>
             <div className="flex space-x-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection("projects")}>
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700"
+                onClick={() => scrollToSection("projects")}
+              >
                 Ver Proyectos
               </Button>
               <Button
@@ -164,9 +213,7 @@ const Portfolio = () => {
                 <span className="text-white font-bold text-sm tracking-wider">
                   {"JACO"}
                 </span>
-
               </div>
-
             </div>
           </motion.div>
         </div>
@@ -197,12 +244,15 @@ const Portfolio = () => {
             >
               <h3 className="text-2xl font-bold mb-4">Mi Trayectoria</h3>
               <p className="text-gray-300 mb-6">
-                Soy un ingeniero de sistemas con un año de experiencia en el desarrollo de aplicaciones web y móviles.
-                Mi enfoque se centra en crear soluciones tecnológicas eficientes y escalables que resuelvan problemas reales.
+                Soy un ingeniero de sistemas con un año de experiencia en el
+                desarrollo de aplicaciones web y móviles. Mi enfoque se centra
+                en crear soluciones tecnológicas eficientes y escalables que
+                resuelvan problemas reales.
               </p>
               <p className="text-gray-300 mb-8">
-                Me especializo en tecnologías modernas como React, Node.js, TypeScript y bases de datos.
-                Tengo interés en arquitectura de software y en interfaces de usuario intuitivas y atractivas.
+                Me especializo en tecnologías modernas como React, Node.js,
+                TypeScript y bases de datos. Tengo interés en arquitectura de
+                software y en interfaces de usuario intuitivas y atractivas.
               </p>
 
               <h4 className="text-xl font-bold mb-4">Habilidades</h4>
@@ -211,7 +261,10 @@ const Portfolio = () => {
                   <motion.div
                     key={i}
                     className="flex items-center space-x-2 bg-gray-800 p-3 rounded-lg"
-                    whileHover={{ y: -5, backgroundColor: "rgba(59,130,246,0.2)" }}
+                    whileHover={{
+                      y: -5,
+                      backgroundColor: "rgba(59,130,246,0.2)",
+                    }}
                   >
                     <div className="text-blue-400">{skill.icon}</div>
                     <span>{skill.name}</span>
@@ -222,7 +275,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
 
       {/* Projects */}
       <section ref={projectsRef} className="py-20">
@@ -262,7 +314,9 @@ const Portfolio = () => {
 
                   {/* Tecnologías (opcional) */}
                   {"technologies" in project && project.technologies && (
-                    <p className="text-sm text-gray-400 mb-4">{project.technologies}</p>
+                    <p className="text-sm text-gray-400 mb-4">
+                      {project.technologies}
+                    </p>
                   )}
 
                   <div className="flex space-x-4">
@@ -298,9 +352,11 @@ const Portfolio = () => {
 
       {/* Contact */}
       {toast.show && (
-        <div className={`fixed bottom-6 right-6 z-[60] px-4 py-3 rounded-lg shadow-lg
+        <div
+          className={`fixed bottom-6 right-6 z-[60] px-4 py-3 rounded-lg shadow-lg
     ${toast.type === "success" ? "bg-green-600" : toast.type === "error" ? "bg-red-600" : "bg-gray-700"}
-    text-white`}>
+    text-white`}
+        >
           {toast.text}
         </div>
       )}
@@ -328,8 +384,9 @@ const Portfolio = () => {
             >
               <h3 className="text-2xl font-bold mb-6">¡Hablemos!</h3>
               <p className="text-gray-300 mb-8">
-                ¿Tienes un proyecto en mente? ¿Quieres colaborar o simplemente saludar?
-                Estoy disponible para nuevas oportunidades y conexiones profesionales.
+                ¿Tienes un proyecto en mente? ¿Quieres colaborar o simplemente
+                saludar? Estoy disponible para nuevas oportunidades y conexiones
+                profesionales.
               </p>
 
               <div className="space-y-4">
@@ -413,49 +470,91 @@ const Portfolio = () => {
 
                   try {
                     // Muestra “enviando…”
-                    setToast({ show: true, type: "loading", text: "Enviando mensaje..." });
-
-                    const resp = await fetch("https://formspree.io/f/mrbaonlw", {
-                      method: "POST",
-                      body: formData,
-                      headers: { Accept: "application/json" },
+                    setToast({
+                      show: true,
+                      type: "loading",
+                      text: "Enviando mensaje...",
                     });
 
+                    const resp = await fetch(
+                      "https://formspree.io/f/mrbaonlw",
+                      {
+                        method: "POST",
+                        body: formData,
+                        headers: { Accept: "application/json" },
+                      },
+                    );
+
                     if (resp.ok) {
-                      setToast({ show: true, type: "success", text: "¡Mensaje enviado con éxito!" });
+                      setToast({
+                        show: true,
+                        type: "success",
+                        text: "¡Mensaje enviado con éxito!",
+                      });
                       form.reset();
                     } else {
-                      setToast({ show: true, type: "error", text: "Hubo un problema. Intenta otra vez." });
+                      setToast({
+                        show: true,
+                        type: "error",
+                        text: "Hubo un problema. Intenta otra vez.",
+                      });
                     }
                   } catch {
-                    setToast({ show: true, type: "error", text: "No se pudo enviar. Revisa tu conexión." });
+                    setToast({
+                      show: true,
+                      type: "error",
+                      text: "No se pudo enviar. Revisa tu conexión.",
+                    });
                   } finally {
                     // Oculta el toast a los 3s
-                    setTimeout(() => setToast(s => ({ ...s, show: false })), 3000);
+                    setTimeout(
+                      () => setToast((s) => ({ ...s, show: false })),
+                      3000,
+                    );
                   }
                 }}
                 className="space-y-6"
               >
                 <div>
                   <Label htmlFor="name">Nombre</Label>
-                  <Input id="name" type="text" name="name" required className="bg-gray-800 border-gray-700 mt-2" />
+                  <Input
+                    id="name"
+                    type="text"
+                    name="name"
+                    required
+                    className="bg-gray-800 border-gray-700 mt-2"
+                  />
                 </div>
 
                 <div>
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" name="email" required className="bg-gray-800 border-gray-700 mt-2" />
+                  <Input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    className="bg-gray-800 border-gray-700 mt-2"
+                  />
                 </div>
 
                 <div>
                   <Label htmlFor="message">Mensaje</Label>
-                  <Textarea id="message" name="message" rows={5} required className="bg-gray-800 border-gray-700 mt-2" />
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="bg-gray-800 border-gray-700 mt-2"
+                  />
                 </div>
 
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                >
                   Enviar Mensaje
                 </Button>
               </form>
-
             </motion.div>
           </div>
         </div>
@@ -464,7 +563,8 @@ const Portfolio = () => {
       <footer className="py-10 border-t border-gray-800">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} José Andrés Castillo Orozco. Todos los derechos reservados.
+            © {new Date().getFullYear()} José Andrés Castillo Orozco. Todos los
+            derechos reservados.
           </p>
         </div>
       </footer>
