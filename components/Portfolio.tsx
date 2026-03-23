@@ -83,7 +83,7 @@ const Portfolio = () => {
       title: "Portafolio Web Personal",
       subtitle: "Personal Website",
       description:
-        "Este mismo portafolio fue desarrollado con React y TypeScript para mostrar mis proyectos, habilidades y experiencia como desarrollador.",
+        "Portafolio desarrollado con React y TypeScript para mostrar mis proyectos, habilidades y experiencia como desarrollador.",
       image: "/Portafolio.PNG",
       github: "#",
       demo: "https://josecastillo.dev",
