@@ -84,7 +84,7 @@ const Portfolio = () => {
       subtitle: "Personal Website",
       description:
         "Este mismo portafolio fue desarrollado con React y TypeScript para mostrar mis proyectos, habilidades y experiencia como desarrollador.",
-      image: "/placeholder.svg",
+      image: "/Portafolio.PNG",
       github: "#",
       demo: "https://josecastillo.dev",
       technologies: "Tecnologías: React, TypeScript, CSS, Vercel",
